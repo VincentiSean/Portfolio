@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    text-rendering: optimizelegibility;
+}
+
+main {
+    box-sizing: border-box;
+    cursor: context-menu;
+    font-family: 'Montserrat', sans-serif;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+header {
+    color: #fff;
+    height: 100vh;
+    margin-bottom: 0;
+    width: 100vw;
+}
+
+header::before {
+    content: ''; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+    background-image: radial-gradient(
+      rgba(50, 50, 50, 0.4),
+      rgba(25, 25, 25, 0.7), 
+      rgba(2, 2, 2, 0.8)
+    ),      
+      url('../images/lukasz-szmigiel-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1.5fr 1.2fr 1.2fr 1.2fr 1.2fr .8fr .8fr;
+    height: 245px;
+}
+
+.navDiv {
+    cursor: pointer;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 10px;
+    transition: background .2s ease-in-out;
+}
+
+.navDiv:hover {
+    background-color: rgba(220, 220, 220, 0.6);
+}
+
+.navDiv h6 {
+    font-size: .70em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.8em;
+    margin-top: 55%;
+}
+
+.navDiv h4 {
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-top: 22px;
+    text-transform: uppercase;
+}
+
+.navDiv h5 {
+    font-size: .65em;
+    font-weight: 700;
+    letter-spacing: .5px;
+    margin-top: 5px;
+}
+
+#logoDiv {
+    cursor: auto;
+    grid-column: 1/1;
+}
+
+#logoDiv:hover {
+    background: none;
+}
+
+#logoDiv img {
+    background: none;
+    cursor: pointer;
+    filter: brightness(500%);
+    height: 100px;
+    margin-top: 20px;
+    width: 100px;
+}
+
+#homeDiv {
+    grid-column: 2/2;
+}
+
+#aboutDiv {
+    grid-column: 3/3;
+}
+
+#portfolioDiv {
+    grid-column: 4/4;
+}
+
+#experienceDiv {
+    grid-column: 5/5;
+}
+
+#heroTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 60px;
+    width: 100%;
+}
+
+#heroTitle p {
+    font-family: 'EB Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+#heroTitle span {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 95px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1em;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+#contactButton {
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    height: 60px;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    transition: .2s ease-in;
+    width: 200px;
+}
+
+#contactButton:hover {
+    background-color: #fff;
+    color: #222;
+    font-weight: 400;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #fff;
+    font-family: 'Merriweather', serif;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.contentSection {
+    border-bottom: 1px solid #ccc;
+    height: 300px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    overflow-x: hidden;
+    width: 78%;
+}
+
+.aboutTitle {
+    color: #2a2a2a;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.aboutInfo {
+    color: #777;
+    font-size: 16px;
+    line-height: 2em;
+}
+
+#briefIntro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 50px auto 0 auto;
+    text-align: center;
+    width: 67%;
+}
+
+#offerDiv, #myWorkDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: -40px;
+}
+
+#offerDiv {
+    height: 550px;
+}
+
+#myWorkDiv {
+    height: 500px;
+}
+
+#offerSubDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.offerImageDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 30px;
+    text-align: center;
+    width: 400px;
+}
+
+.fontAws {
+    color: #2a2a2a;
+    font-size: 96px;
+    margin-bottom: 30px;
+}
+
+.fas {
+    font-size: 120px;
+}
+
+.offerTitle {
+    color: #2a2a2a;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2.5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#myWorkSub {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectContent {
+    position: relative;
+    height: 325px;
+    width: 325px;
+    margin-right: 15px;
+    margin-left: 15px;
+    overflow: hidden;
+}
+
+.projectContent .imageOverlay {
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.projectContent:hover .imageOverlay {
+    opacity: 1;
+}
+
+.projectImage {
+    height: 325px;
+    margin-right: 15px;
+    object-fit: cover;
+    width: 325px;
+}
+
+.projectDetails {
+    color: #fff;
+    opacity: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out 0s;
+    width: 100%;
+}
+
+.projectContent:hover .projectDetails {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+
+.smallProjDesc {
+    color: #ccc;
+    font-family: 'EB Garamond', serif;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transform: translate(0%, 175%);
+    transition: all .4s ease-in-out;
+}
+
+.projectContent:hover .smallProjDesc {
+    transform: translate(0%, 250%);
+}
+
+.projTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    line-height: 1.5em;
+    margin-top: 40px;
+    text-transform: uppercase;
+    transition: all .4s ease-in-out;
+    transform: translate(0%, 0%);
+}
+
+.projectContent:hover .projTitle {
+    transform: translate(0%, 10%);
+}
+
+.projectButton {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    height: 35px;
+    letter-spacing: 1.8px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    transform: translate(0%, -75%);
+    transition: all .4s ease-in-out;
+    width: 150px;
+
+}
+
+.projectButton:hover {
+    background-color: #fff;
+    color: #2a2a2a;
+    font-weight: 600;
+}
+
+.projectContent:hover .projectButton {
+    transform: translate(0%, -100%);
+}
