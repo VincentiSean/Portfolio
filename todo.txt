@@ -1,0 +1,5 @@
+TODO:
+
+    -   Add button functionality
+    -   Add footer
+    -   Add a about project page for each project(proccess, issues, etc)
