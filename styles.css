@@ -3,25 +3,24 @@
     padding: 0;
 }
 
-body {
-    font-size: 16px;
-    text-rendering: optimizelegibility;
-}
+
 
 main {
     box-sizing: border-box;
     cursor: context-menu;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;    
+    font-size: 16px;
     overflow-y: auto;
     overflow-x: hidden;
-    width: 100vw;
+    text-rendering: optimizelegibility;
+    width: 100%;
 }
 
 header {
     color: #fff;
     height: 100vh;
     margin-bottom: 0;
-    width: 100vw;
+    width: 100%;
 }
 
 header::before {
@@ -47,7 +46,7 @@ header::before {
 
 nav {
     display: grid;
-    grid-template-columns: 1.5fr 1.2fr 1.2fr 1.2fr 1.2fr .8fr .8fr;
+    grid-template-columns: 20% 15% 15% 15% 15% 10% 10%;
     height: 245px;
 }
 
@@ -188,6 +187,7 @@ nav {
     margin-top: 20px;
     margin-bottom: 50px;
     overflow-x: hidden;
+    padding-bottom: 35px;
     width: 78%;
 }
 
@@ -229,6 +229,7 @@ nav {
 }
 
 #myWorkDiv {
+    border-bottom: none;
     height: 500px;
 }
 
@@ -273,12 +274,16 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
+    width: 100%;
 }
 
 .projectContent {
     position: relative;
-    height: 325px;
-    width: 325px;
+    height: auto;
+    max-height: 325px;
+    width: 33%;
+    max-width: 325px;
     margin-right: 15px;
     margin-left: 15px;
     overflow: hidden;
@@ -387,6 +392,7 @@ nav {
 #portfolioSection {
     background-color: #fff;
     display: none;
+    padding-bottom: 35px;
     width: 100%;
 }
 
@@ -511,4 +517,115 @@ nav {
     margin-top: -60px;
     margin-bottom: 20px;
     width: 205px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #2a2a2a;
+    height: 250px;
+}
+
+footer h1 {
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    margin-top: 5px;
+}
+
+#footerLinksDiv {
+    margin-top: 10px;
+}
+
+footer a {
+    color: #fff;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.icon {
+    height: 24px;
+    stroke: #fff;
+}
+
+.fab {
+    font-size: 24px;
+}
+
+
+@media only screen and (max-width: 800px) {
+    nav {
+        grid-template-columns: 25% 18.75% 18.75% 18.75% 18.75%;
+        grid-column-gap: 10px;
+    }
+
+    .navDiv {
+        margin-right: 10px;
+        margin-left: 30px;
+        padding-left: 10px;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .navDiv h5 {
+        display: none;
+    }
+
+    .navDiv h4 {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .aboutTitle {
+        font-size: 36px;
+        margin-top: 40px;
+    }
+
+    #briefIntro {
+        height: 200px;
+    }
+
+    #myWorkDiv, #offerDiv {
+        height: auto;
+    }
+
+    #offerSubDiv {
+        flex-direction: column;
+    }
+
+    .offerImageDiv {
+        margin-bottom: 40px;
+    }
+
+    .fontAws {
+        margin-top: 20px;
+    }
+
+    #myWorkSub {
+        flex-direction: column;
+    }
+
+    .projectContent {
+        margin-bottom: 45px;
+        max-width: none;
+        max-height: none;
+        width: 80%;
+    }
+
+    .projectImage {
+        height: 100%;
+        width: 100%;
+    }
 }
