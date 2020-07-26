@@ -3,8 +3,6 @@
     padding: 0;
 }
 
-
-
 main {
     box-sizing: border-box;
     cursor: context-menu;
@@ -134,7 +132,7 @@ nav {
     text-align: center;
 }
 
-#heroTitle span {
+#heroBottomText {
     display: block;
     font-family: 'Montserrat', sans-serif;
     font-size: 95px;
@@ -563,30 +561,6 @@ footer a {
     font-size: 24px;
 }
 
-
-@media only screen and (max-width: 800px) {
-    nav {
-        grid-template-columns: 25% 18.75% 18.75% 18.75% 18.75%;
-        grid-column-gap: 10px;
-    }
-
-    .navDiv {
-        margin-right: 10px;
-        margin-left: 30px;
-        padding-left: 10px;
-        padding-right: 0;
-        width: 100%;
-    }
-
-    .navDiv h5 {
-        display: none;
-    }
-
-    .navDiv h4 {
-        margin-top: 0;
-    }
-}
-
 @media only screen and (max-width: 1000px) {
     .aboutTitle {
         font-size: 36px;
@@ -627,5 +601,88 @@ footer a {
     .projectImage {
         height: 100%;
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    nav {
+        grid-template-columns: 25% 18.75% 18.75% 18.75% 18.75%;
+        grid-column-gap: 10px;
+        height: 150px;
+        margin-bottom: 150px;
+    }
+
+    .navDiv {
+        margin-right: 10px;
+        margin-left: 30px;
+        padding-left: 10px;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .navDiv h6 {
+        margin-top: 55px;
+    }
+
+    .navDiv h5 {
+        display: none;
+    }
+
+    .navDiv h4 {
+        margin-top: 0;
+    }
+
+    #heroBottomText {
+        font-size: 10vw;
+    }
+
+    .contentSection {
+        height: auto;
+    }
+
+    #briefIntro {
+        height: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    #myWorkDiv {
+        width: 100%;
+    }
+
+    .projectContent {
+        margin: 0 0 -4px 0;
+        width: 100%;
+    }
+
+    .projectContent .imageOverlay {
+        height: 99%;
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+    /* make a sticky left side menu */
+
+
+    #offerDiv {
+        width: 67%;
+    }
+
+    .aboutTitle {
+        font-size: 32px;
+    }
+
+    .offerImageDiv {
+        margin-left: 35px;
+        width: 90%;
+    }
+
+    .fontAws {
+        font-size: 20vw;
+    }
+
+    .far {
+        font-size: 18vw;
     }
 }
